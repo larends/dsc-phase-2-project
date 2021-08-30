@@ -76,11 +76,29 @@ The revised model using ordinary least squares is selected because it has a high
 
 <img src= 'Images/model_metrics.png' width = "700">
 
-According to the coefficients in this model, 
+<img src= 'Images/features_slide.png' width = "700">
+
+
+Based upon the coefficients in the model, the following conclusions can be reached:
+- Location matters. Because this is the largest coefficient, this single feature has the most impact on the predicted sale price of a home. Waterfront, which is also a component of location, is also important (increases price by 5%).
+- The square footage of the home is the second most important feature. For each 900 square feet (1 standard deviation), the price is expected to increase by 22%.
+- The next most important feature is the number of bathrooms, with an average coefficient of 0.16. This means that, on average, increasing from less than 1.5 bathrooms increases the predicted sales price of the home by 16%.
+- Other features that are important to the model are the grade of the materials used in the home and number of bedrooms.
+
+For the categorical variables of zip code, bathrooms and bedrooms, the average coefficients of the categories are listed in the table. In the actual model, these vary based upon the category. 
+
+<img src= 'Images/important_features.png' width = "300">
+
+
+More specifically, according to the coefficients in this model, 
 - Adding approximately 900 square feet (1 standard deviation) is expected to increase the sale price of the house by 21-23%, all other features held constant.
 - Adding a 2nd bathroom is expected to increase the sale price by 2-5%.
 - Adding a 3rd bedroom is expected to increase the sale price by 2-4%.
 - Doing a remodel (assuming one has not been done since 2000) is expected to increase the sale price by 0.8 and 1.5%
+
+The mean absolute error for the model is -.145. This means that the model tends to be 14.5% off the actual price. Based on the model using unscaled data and an un-transformed price target, the model tends to underestimate the predicted sale price by about $96,000. 
+
+Because this model is used to show the change the change in predicted sale price after renovations and the underestimation will be proportional on the original and renovated homes, this error is acceptable with this model.
 
 
 ### Linear Assumptions
@@ -124,6 +142,12 @@ The current website design should be updated to request current house informatio
 <img src= 'Images/Original Home.png' width = "700">
 
 <img src= 'Images/Add 400 sqft.png' width = "700">
+
+Even though adding additional square footage has the most impact on the predicted sales price, because of the cost of construction, it does not have the greatest return on investment.
+
+The greatest ROI comes from adding additional bedrooms and bathrooms within existing square footage. Once this price prediction tool is deployed, Premium Remodeling can expect to see an increase in homeowners wanting to add these features to their homes.
+
+<img src= 'Images/expectations.png' width = "700">
 
 ## Future Work
 
